@@ -1,9 +1,24 @@
 # vm2fews
 
-Questo comando permette di scaricare dati meteorologici archiviati sui server del SIMC convertendoli al volo in file XML pronti per essere caricati in FEWS.
+Scarica dati meteo da arkiweb e li salva come file XML caricabili su FEWS.
 
-È uno script 100% Python senza altre dipendenze, quindi può essere eseguito su qualunque sistema con Python-3.6 o superiore, senza bisogno di una installazione.
+L'unico requisito è un'installazione standard di Python-3.6 o superiore, non serve altro.
 
-Per evitare di passare utente e password da linea di comando, la URL da cui scaricare i dati deve essere scritta in un file. Per default il nome del file è `arkiweb_url.txt` e deve essere nella stessa cartella da cui si esegue il comando. Però si può specificare un nome diverso.
+Non c'è installazione, basta scaricare il file `vm2fews.py` ed eseguirlo con `python3 vm2fews.py`. Per un aiuto su tutte le opzioni, eseguire `python3 vm2fews.py --help`.
 
-Per un aiuto su tutte le opzioni, eseguire `python3 vm2fews.py --help`.
+## Quick Start
+
+Creare un file `arkiweb_url.txt` con solo l'URL da cui scaricare i dati. Esempio di URL: https://USER:PASSWORD@simc.arpae.it/services/arkiweb/data
+
+L'unico parametro obbligatorio è il nome del dataset di cui scaricare i dati. Esempio:
+
+```shell
+$ python3 vm2fews.py simnpr > simnpr.xml
+$ firefox $PWD/simnpr.xml
+```
+
+## FAQ
+
+### Posso passare l'URL da linea di comando?
+
+No, per evitare di passare utente e password da linea di comando, salvandolo così nella history della shell.
