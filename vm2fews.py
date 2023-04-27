@@ -268,7 +268,7 @@ def get_config():
     if not args.arkiweb_url_file.exists():
         raise Exception(f"Il file {args.arkiweb_url_file} non esiste")
     with open(args.arkiweb_url_file, encoding="utf-8") as fp:
-        arkiweb_url = fp.read()
+        arkiweb_url = fp.read().strip()
     # Per le nostre esigenze, è sufficiente un'implementazione di indent primitiva:
     # un array di rientri, uno per ogni livello di indentazione.
     if args.indent:
