@@ -38,7 +38,7 @@ Così si vedono anche i rispettivi valori di default. Per esempio il default di 
 
 No, per evitare di passare utente e password da linea di comando, salvandolo così nella history della shell.
 
-### Perché viene creato un file <dataset>.vm2 (esemio: simnpr.vm2)?
+### Perché viene creato un file <dataset>.vm2 (esempio: simnpr.vm2)?
 
 È il file originale con i dati scaricati da arkiweb. È un CSV che viene immediatamente convertito in XML per FEWS. Può essere cancellato tranquillamente. Questo per il momento non viene fatto automaticamente per rendere più semplice il debugging.
 
