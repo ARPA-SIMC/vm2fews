@@ -2,7 +2,7 @@
 
 Scarica dati meteo da arkiweb e li salva come file XML caricabili su FEWS.
 
-L'unico requisito è un'installazione standard di Python-3.6 o superiore, non serve altro.
+L'unico requisito è un'installazione standard di Python-3.6 o superiore, non serve altro. Se si usa RedHat o Centos 7, è necessario installare il pacchetto `python3` perché potrebbe non essere installato di default.
 
 Non c'è installazione, basta scaricare il file `vm2fews.py` ed eseguirlo con `python3 vm2fews.py`. Per un aiuto su tutte le opzioni, eseguire `python3 vm2fews.py --help`.
 
@@ -41,3 +41,7 @@ No, per evitare di passare utente e password da linea di comando, salvandolo cos
 ### Perché viene creato un file <dataset>.vm2 (esemio: simnpr.vm2)?
 
 È il file originale con i dati scaricati da arkiweb. È un CSV che viene immediatamente convertito in XML per FEWS. Può essere cancellato tranquillamente. Questo per il momento non viene fatto automaticamente per rendere più semplice il debugging.
+
+### Perché non usi una libreria per generare l'XML?
+
+Perché l'XML prodotto è talmente semplice che avrebbe complicato il codice senza aggiungere niente.
