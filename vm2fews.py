@@ -231,7 +231,7 @@ def get_config():
         "--step",
         type=parse_timedelta,
         default=timedelta(hours=1),
-        help="Periodicità dei dati scaricati. Default: 1h",
+        help="Periodicità dei dati scaricati espressa in ore (h), minuti (m) o secondi (s). Default: 1h",
     )
     parser.add_argument(
         "--arkiweb_url_file",
